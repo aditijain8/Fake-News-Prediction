@@ -1,7 +1,7 @@
 # Fake-News-Prediction
 This project is a machine learning-based system to detect fake news using Natural Language Processing (NLP) techniques. It uses the Logistic Regression algorithm for classification after processing and vectorizing text data from news articles.
 
-🔧 Technologies Used
+🔧Technologies Used
 </br>
 Python
 </br>
@@ -42,7 +42,6 @@ Dataset shape: (20800, 5)
 </br>
 3. Data Cleaning
 Missing values are filled with empty strings.
-
 author and title columns are merged to create a new content column.
 </br>
 4. Text Preprocessing
@@ -53,11 +52,8 @@ Copy
 Edit
 def stemming(content):
     ...
-
-</br>
 5. Feature Extraction
 Text data is converted into numerical features using TF-IDF Vectorization.
-
 python
 Copy
 Edit
@@ -72,7 +68,6 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, stratif
 </br>
 7. Model Training
 A Logistic Regression model is trained on the vectorized features.
-
 python
 Copy
 Edit
@@ -84,35 +79,24 @@ The model's accuracy is tested on both training and test sets using accuracy_sco
 </br>
 📊 Results
 You can evaluate the model using:
-
 python
 Copy
 Edit
 training_data_accuracy = accuracy_score(Y_train, X_train_prediction)
 test_data_accuracy = accuracy_score(Y_test, X_test_prediction)
-
-</br></br>
-
-
 </br>
 🚀 How to Run
 Clone the repository or download the notebook.
 </br>
 Install required libraries:
-</br>
 bash
 Copy
 Edit
 pip install numpy pandas scikit-learn nltk
-</br>
 Run the Jupyter notebook or Python script.
-
 Make sure train.csv is available in the working directory.
-</br>
 </br>
 📌 Future Improvements
 Use advanced models like Random Forest or XGBoost
-
 Use deep learning (LSTM, BERT)
-
 Build a web interface for real-time prediction
