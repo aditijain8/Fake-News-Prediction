@@ -32,7 +32,6 @@ label: Binary label (1 = Fake, 0 = Real)</br>
 </br>
 1. Import Dependencies
 All required libraries like pandas, nltk, and sklearn are imported. Stopwords from NLTK are also downloaded.
-</br>
 2. Load Dataset
 python
 Copy
@@ -51,7 +50,6 @@ python
 Copy
 Edit
 def stemming(content):
-    ...
 5. Feature Extraction
 Text data is converted into numerical features using TF-IDF Vectorization.
 python
@@ -77,6 +75,7 @@ model.fit(X_train, Y_train)
 8. Evaluation
 The model's accuracy is tested on both training and test sets using accuracy_score.
 </br>
+</br>
 📊 Results
 You can evaluate the model using:
 python
@@ -84,6 +83,7 @@ Copy
 Edit
 training_data_accuracy = accuracy_score(Y_train, X_train_prediction)
 test_data_accuracy = accuracy_score(Y_test, X_test_prediction)
+</br>
 </br>
 🚀 How to Run
 Clone the repository or download the notebook.
@@ -95,6 +95,7 @@ Edit
 pip install numpy pandas scikit-learn nltk
 Run the Jupyter notebook or Python script.
 Make sure train.csv is available in the working directory.
+</br>
 </br>
 📌 Future Improvements
 Use advanced models like Random Forest or XGBoost
