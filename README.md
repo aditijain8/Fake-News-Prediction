@@ -38,14 +38,11 @@ Copy
 Edit
 news_dataset = pd.read_csv('/content/train.csv')
 Dataset shape: (20800, 5)
-</br>
 3. Data Cleaning
 Missing values are filled with empty strings.
 author and title columns are merged to create a new content column.
-</br>
 4. Text Preprocessing
 Using regular expressions, lowercase conversion, stopword removal, and Porter Stemming, the text is cleaned and normalized.
-</br>
 python
 Copy
 Edit
@@ -57,13 +54,11 @@ Copy
 Edit
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(X)
-</br>
 6. Train-Test Split
 python
 Copy
 Edit
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, stratify=Y, random_state=2)
-</br>
 7. Model Training
 A Logistic Regression model is trained on the vectorized features.
 python
@@ -71,12 +66,12 @@ Copy
 Edit
 model = LogisticRegression()
 model.fit(X_train, Y_train)
-</br>
 8. Evaluation
 The model's accuracy is tested on both training and test sets using accuracy_score.
 </br>
 </br>
 📊 Results
+</br>
 You can evaluate the model using:
 python
 Copy
@@ -86,6 +81,7 @@ test_data_accuracy = accuracy_score(Y_test, X_test_prediction)
 </br>
 </br>
 🚀 How to Run
+</br>
 Clone the repository or download the notebook.
 </br>
 Install required libraries:
@@ -98,6 +94,7 @@ Make sure train.csv is available in the working directory.
 </br>
 </br>
 📌 Future Improvements
+</br>
 Use advanced models like Random Forest or XGBoost
 Use deep learning (LSTM, BERT)
 Build a web interface for real-time prediction
